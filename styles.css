@@ -1,70 +1,133 @@
-body {
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #1c1c7a, #0f4c75);
-    color: white;
+    background-color: #f2f2f2;
+    color: #333;
     text-align: center;
     padding: 20px;
   }
   
+  header {
+    background-color: #FF6347;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+  }
+  
   h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  main {
+    margin-top: 30px;
+  }
+  
+  .fact {
+    background-color: #fff;
+    border: 2px solid #FFD700;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: #FF6347;
     margin-bottom: 10px;
   }
   
   p {
     font-size: 1.2rem;
-    margin: 5px;
+    color: #555;
+    line-height: 1.6;
   }
   
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 400px;
-    margin: 20px auto;
-  }
-  
-  .hole {
-    width: 100px;
-    height: 100px;
-    background: #3b3b3b;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-  
-  .tree {
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease;
-  }
-  
-  .hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-  
-  .active .tree {
-    opacity: 1;
-    pointer-events: all;
-  }
-  
-  button {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+  footer {
+    margin-top: 40px;
     font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+    color: #333;
   }
   
-  button:hover {
-    background-color: #d32f2f;
+  footer p {
+    font-weight: bold;
+  }
+  
+  /* Snowflakes Animation */
+  .snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .snowflake {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    animation: snow 10s linear infinite;
+    opacity: 0.8;
+  }
+  
+  /* Snowflake 1 */
+  .snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 10s;
+    animation-delay: 0s;
+    font-size: 2.5rem;
+  }
+  
+  /* Snowflake 2 */
+  .snowflake:nth-child(2) {
+    left: 30%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+    font-size: 3rem;
+  }
+  
+  /* Snowflake 3 */
+  .snowflake:nth-child(3) {
+    left: 50%;
+    animation-duration: 8s;
+    animation-delay: 4s;
+    font-size: 2.2rem;
+  }
+  
+  /* Snowflake 4 */
+  .snowflake:nth-child(4) {
+    left: 70%;
+    animation-duration: 11s;
+    animation-delay: 1s;
+    font-size: 2.7rem;
+  }
+  
+  /* Snowflake 5 */
+  .snowflake:nth-child(5) {
+    left: 90%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+    font-size: 2.4rem;
+  }
+  
+  /* Snow falling animation */
+  @keyframes snow {
+    0% {
+      top: -10%;
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
   }
   
